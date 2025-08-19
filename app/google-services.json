@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "374724810930",
+    "project_id": "foodhubuni-a96ce",
+    "storage_bucket": "foodhubuni-a96ce.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:374724810930:android:56c45410d55460d92051ab",
+        "android_client_info": {
+          "package_name": "com.example.foodhub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "374724810930-h144s2dlu0po4ndvu5psjcet7b52cu85.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFsg5YyvPwVrbnzjjq2g1AjPE9tuyhKBY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "374724810930-h144s2dlu0po4ndvu5psjcet7b52cu85.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
