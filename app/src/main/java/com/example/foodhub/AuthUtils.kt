@@ -7,6 +7,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.auth
 import android.util.Log
+import android.widget.Toast
 import androidx.credentials.CustomCredential
 import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
 import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential.Companion.TYPE_GOOGLE_ID_TOKEN_CREDENTIAL
@@ -22,8 +23,10 @@ class AuthUtils (private val auth: FirebaseAuth = Firebase.auth) {
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     onResult(true, auth.currentUser)
+                    Log.w("Auth", "registerUser: success")
                 } else {
                     onResult(false, null)
+                    Log.w("Auth", "registerUser: failure")
                 }
             }
     }
@@ -55,12 +58,12 @@ class AuthUtils (private val auth: FirebaseAuth = Firebase.auth) {
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
-                    Log.d("GoogleAuth", "signInWithCredential:success")
+                    Log.d("GoogleAuth", "signInWithCredential: success")
                     val user = auth.currentUser
 
                 } else {
                     // If sign in fails, display a message to the user
-                    Log.w("GoogleAuth", "signInWithCredential:failure",)
+                    Log.w("GoogleAuth", "signInWithCredential: failure",)
 
                 }
             }
