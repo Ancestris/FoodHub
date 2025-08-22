@@ -1,7 +1,7 @@
 package com.example.foodhub
 
 
-import android.credentials.Credential
+import androidx.credentials.Credential
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
@@ -52,7 +52,7 @@ class AuthUtils (private val auth: FirebaseAuth = Firebase.auth) {
                 }
             }
     }
-    private fun firebaseAuthWithGoogle(idToken: String) {
+    fun firebaseAuthWithGoogle(idToken: String) {
         val credential = GoogleAuthProvider.getCredential(idToken, null)
         auth.signInWithCredential(credential)
             .addOnCompleteListener { task ->
@@ -69,7 +69,7 @@ class AuthUtils (private val auth: FirebaseAuth = Firebase.auth) {
             }
     }
 
-    private fun handleSignIn(credential: Credential) {
+    fun handleSignIn(credential: Credential) {
         // Check if credential is of type Google ID
         if (credential is CustomCredential && credential.type == TYPE_GOOGLE_ID_TOKEN_CREDENTIAL) {
             // Create Google ID Token
@@ -81,4 +81,5 @@ class AuthUtils (private val auth: FirebaseAuth = Firebase.auth) {
             Log.w("GoogleAuth", "Credential is not of type Google ID!")
         }
     }
+
 }

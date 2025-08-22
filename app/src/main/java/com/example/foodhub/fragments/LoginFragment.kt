@@ -36,7 +36,8 @@ class LoginFragment : Fragment() {
         auth= FirebaseAuth.getInstance()
     }
     private fun registerEvents(){
-        binding.newAccLink.setOnClickListener{ navController.navigate(R.id.action_loginFragment_to_signinFragment) }
+        binding.newAccLink.setOnClickListener{ navController.navigate(R.id.action_loginFragment_to_signinFragment)}
+        binding.forgotPswLink.setOnClickListener{ navController.navigate(R.id.action_loginFragment_to_recoverPswFragment)}
 
     }
 
